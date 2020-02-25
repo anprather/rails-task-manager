@@ -1,0 +1,13 @@
+
+<%= form_for(task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+
+  <% if task.id %>
+    <%= f.check_box :completed %>
+    <%= label_tag(:completed, "check if this task is completed") %>
+  <% end %>
+  <%= f.submit %>
+<% end %>
